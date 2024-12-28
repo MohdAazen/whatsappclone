@@ -40,7 +40,7 @@ class UiHelper {
       height: 40,
       width: 40,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Color(0XFFD9D9D9A1)),
+          borderRadius: BorderRadius.circular(10), color: Color(0XFFD9D9D9)),
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: TextField(
