@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappclone/Screens/HomeScreen/ContactPage/contactscreen.dart';
 import 'package:whatsappclone/Widgets/uihelper.dart';
 
 class ChatsScreen extends StatelessWidget {
@@ -121,8 +122,9 @@ class ChatsScreen extends StatelessWidget {
                     ),
                     title: UiHelper.CustomText(
                         text: arrContent[index]["name"].toString(),
-                        height: 14,
-                        fontweight: FontWeight.bold),
+                        height: 15,
+                        fontweight: FontWeight.bold,
+                        color: Color(0XFF000000)),
                     subtitle: UiHelper.CustomText(
                         text: arrContent[index]["lastMsg"].toString(),
                         height: 12),
@@ -152,12 +154,18 @@ class ChatsScreen extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton: CircleAvatar(
-          radius: 30,
-          backgroundColor: Color(0XFF008665),
-          child: Icon(
-            Icons.chat,
-            color: Color(0XFFFFFFFF),
+        floatingActionButton: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Contactscreen()));
+          },
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor: Color(0XFF008665),
+            child: Icon(
+              Icons.chat,
+              color: Color(0XFFFFFFFF),
+            ),
           ),
         ));
   }
